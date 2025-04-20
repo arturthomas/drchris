@@ -1,0 +1,301 @@
+:root {
+    --cor-primaria: #d1caca00;
+    --cor-secundaria: #a2adc0;
+    --cor-terciaria: #504e4b;
+    --cor-quarta: #e0e0e0;
+}
+
+@font-face {
+    font-family: 'Gistesy';
+    src: url('fonts/Gistesy.ttf') format('truetype');
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Menu Mobile */
+header {
+    background: var(--cor-primaria);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Gistesy', cursive;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+}
+
+.menu-mobile {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+}
+
+.menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--cor-quarta);
+}
+
+.menu-links.active {
+    display: flex;
+}
+
+.menu-links a {
+    color: var(--cor-terciaria);
+    padding: 1rem;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--cor-terciaria), var(--cor-secundaria));
+    padding: 7rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-quarta);
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.botao-consulta {
+    background: var(--cor-secundaria);
+    color: black;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.botao-consulta:hover {
+    background: var(--cor-terciaria);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--cor-terciaria);
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--cor-terciaria);
+    margin: 2rem auto;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    max-width: 90%;
+    height: auto;
+}
+
+/* Seções */
+.section {
+    padding: 1rem 1rem;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-terciaria);
+}
+
+.bg-cinza {
+    background: var(--cor-quarta);
+}
+
+/* Serviços */
+.icon-personalizado {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-personalizado img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(8%) saturate(480%) hue-rotate(350deg) brightness(92%) contrast(90%);
+    transition: transform 0.3s;
+}
+
+.servico-card:hover .icon-personalizado img {
+    transform: scale(1.2);
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.servico-card {
+    background: var(--cor-quarta);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+}
+
+.servico-card h3 {
+    color: var(--cor-terciaria);
+    margin-bottom: 0.5rem;
+}
+
+.servico-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--cor-terciaria);
+    transition: transform 0.3s;
+}
+
+.servico-card:hover i {
+    transform: scale(1.2);
+}
+
+/* Rodapé */
+footer {
+    background: var(--cor-terciaria);
+    color: var(--cor-quarta);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Media Query para Tablets */
+@media (min-width: 768px) {
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+    }
+
+    .menu-links a {
+        border: none;
+        padding: 0 1rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 7rem 2rem;
+        justify-content: space-between;
+    }
+
+    .foto-perfil {
+        margin: 0 0 0 3rem;
+        order: 2;
+    }
+
+    .hero-content {
+        order: 1;
+        text-align: left;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query para Desktop */
+@media (min-width: 1024px) {
+    .servicos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content {
+        max-width: 50%;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 200px;
+    }
+}
+
+/* Botão WhatsApp */
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.whatsapp-fixo:hover {
+    transform: scale(1.1);
+}
+
+.menu-links a.active {
+    border-bottom: 2px solid var(--cor-secundaria);
+}
