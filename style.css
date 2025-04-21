@@ -20,7 +20,7 @@
 
 /* Menu Mobile */
 header {
-    background: var(--cor-primaria);
+    background: var(--cor-terciaria);
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -34,16 +34,15 @@ header {
 }
 
 .logo {
-    color: black;
+    color: var(--cor-quarta);
     font-weight: bold;
-    font-size: 1.2rem;
-    font-family: 'Gistesy', cursive;
-    font-size: 2em;
+    font-family: cursive;
+    font-size: 1.5em;
     letter-spacing: 0.2em;
 }
 
 .menu-mobile {
-    color: var(--cor-secundaria);
+    color: var(--cor-quarta);
     font-size: 1.5rem;
     cursor: pointer;
     display: block;
@@ -61,13 +60,14 @@ header {
 
 .menu-links.active {
     display: flex;
+    background-color: var(--cor-terciaria);
 }
 
 .menu-links a {
-    color: var(--cor-terciaria);
+    color: var(--cor-quarta);
     padding: 1rem;
     text-decoration: none;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid black;
     text-align: center;
 }
 
@@ -95,16 +95,16 @@ header {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    color: black;
+    font-size: 1.7rem;
+    color: var(--cor-quarta);
     font-weight: 600;
     margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .botao-consulta {
-    background: var(--cor-secundaria);
-    color: black;
+    background: var(--cor-terciaria);
+    color: var(--cor-quarta);
     padding: 14px 30px;
     border-radius: 30px;
     font-size: 1rem;
@@ -117,8 +117,8 @@ header {
 }
 
 .botao-consulta:hover {
-    background: var(--cor-terciaria);
-    color: white;
+    background: var(--cor-secundaria);
+    color: var(--cor-quarta);
     transform: translateY(-2px);
 }
 
