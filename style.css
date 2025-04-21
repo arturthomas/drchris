@@ -118,7 +118,7 @@ header {
 
 .botao-consulta:hover {
     background: var(--cor-secundaria);
-    color: var(--cor-quarta);
+    color: var(--cor-terciaria);
     transform: translateY(-2px);
 }
 
